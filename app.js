@@ -13,8 +13,8 @@ async function weatherData(){
         .then((res) => {
       let data = res.data;
       let main = res.data.main;
-      let cityTempMax = parseInt(main.temp_max - 273.15);
-      let cityTempMin = parseInt(main.temp_min - 273.15);
+      let cityTempMax = parseInt(main.temp_max - 273.15) +' C';
+      let cityTempMin = parseInt(main.temp_min - 273.15) +' C';
       let cityHumidity = main.humidity;
       let cityName = data.name;
       let country = data.sys.country;
@@ -30,6 +30,8 @@ async function weatherData(){
           qusOne = readLineSync.question(`Do you want continue 'yes','no': `);
           if (qusOne==='y') {
             weatherData()
+          } else {
+            console.log(`Thanks for using the :thermometer: :thumbsup:`);
           }
     })
     .catch((err) => {
