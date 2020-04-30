@@ -4,9 +4,9 @@ let qusOne = 'n';
 
 
 async function weatherData(){
-    do {
+  
     let cName = readLineSync.question('Give the name of the city: ');
-   await axios
+    axios
     .get(
         `http://api.openweathermap.org/data/2.5/weather?q=${cName}&APPID=ee4102e4815321c59c6bf45bd915082c`,
         )
@@ -27,12 +27,15 @@ async function weatherData(){
         cityHumidity,
       };
       console.log('CityObj :>> ', CityObj);
-      qusOne = readLineSync.question(`Do you want continue 'yes','no': `);
+          qusOne = readLineSync.question(`Do you want continue 'yes','no': `);
+          if (qusOne==='y') {
+            weatherData()
+          }
     })
     .catch((err) => {
         throw err;
     });
-} while (qusOne==='y');
+
 };
 
  weatherData()
