@@ -1,0 +1,23 @@
+{
+  "name": "weathercliapp",
+  "version": "1.0.0",
+  "description": "for the Weather of the city ",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vd89/weatherCLIApp.git"
+  },
+  "author": "Dax Code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vd89/weatherCLIApp/issues"
+  },
+  "homepage": "https://github.com/vd89/weatherCLIApp#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "readline-sync": "^1.4.10"
+  }
+}
